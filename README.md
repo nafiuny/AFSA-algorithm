@@ -12,6 +12,15 @@ This is the base code for implementing the AFSA algorithm and can be customized 
 
 << this Code is completely based on AFSA papers >>
 
+
+<p align="center">
+<br><br><br><br>
+<img src="AFSA-Algorithm.png" width="800">
+<br>
+<b>Figure1: AFSA First Iteration</b>
+<br><br><br><br>
+</p>
+
 ## Run
 You can adjust the parameters according to your application. The code provides a visual representation of the position of the fish during execution for better insight into the process. If you want, you can activate this part of the code.
 
