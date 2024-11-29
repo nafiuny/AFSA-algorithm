@@ -6,7 +6,7 @@ The Artificial Fish Swarm Algorithm (AFSA) is a population-based optimization me
 
 
 <br><br>
-<img src="Afiuny-fish-scope.png" width="800">
+<img src="fish-scope.png" width="250">
 <br>
 <br><br><br><br>
 The complete code of the Artificial Fish Swarm (AFSA) algorithm includes the implementation of all the main fish behaviors (searching, swarming, following and attacking), along with tuning parameters and stopping conditions.
@@ -18,7 +18,7 @@ This is the base code for implementing the AFSA algorithm and can be customized 
 
 <p align="center">
 <br><br><br><br>
-<img src="Afiuny-AFSA-Algorithm.png" width="800">
+<img src="AFSA-Algorithm.png" width="800">
 <br>
 <b>Figure1: AFSA First Iteration</b>
 <br><br><br><br>
