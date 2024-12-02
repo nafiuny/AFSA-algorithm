@@ -18,15 +18,65 @@ This is the base code for implementing the AFSA algorithm and can be customized 
 
 <p align="center">
 <br><br><br><br>
-<img src="AFSA-Algorithm.png" width="800">
+<img src="AFSA-plt.png" width="800">
 <br>
-<b>Figure1: AFSA First Iteration</b>
+<b>AFSA First & last Iteration</b>
 <br><br><br><br>
 </p>
 
-## Run
-You can adjust the parameters according to your application. The code provides a visual representation of the position of the fish during execution for better insight into the process. If you want, you can activate this part of the code.
+
+## Run AFSA
+
+To run the AFSA algorithm, execute the following code:
+```
+def func(x):
+    x1, x2 = x
+    return 1 / x1 ** 2 + x1 ** 2 + 1 / x2 ** 2 + x2 ** 2
+
+
+from AFSA import AFSA
+
+afsa = AFSA(func, n_dim=2, size_pop=50, max_iter=300,
+            max_try_num=100, step=0.5, visual=0.3,
+            q=0.98, delta=0.5)
+best_x, best_y = afsa.run()
+print(best_x, best_y)
+
 
 ```
-python main.py 
+
+## Plot AFSA
+
+To display the positions of the fish in the first and last iterations, run the following code:
+```
+
+import matplotlib.pyplot as plt
+
+# First iteration fish positions
+positions_start = afsa.history_positions[0]
+
+# Last iteration fish positions
+positions_end = afsa.history_positions[-1]
+
+# Plot positions
+plt.figure(figsize=(12, 6))
+
+# First iteration
+plt.subplot(1, 2, 1)
+plt.scatter(positions_start[:, 0], positions_start[:, 1], c='blue', alpha=0.7)
+plt.title('Fish Positions - Iteration 1')
+plt.xlabel('X1')
+plt.ylabel('X2')
+
+# Last iteration
+plt.subplot(1, 2, 2)
+plt.scatter(positions_end[:, 0], positions_end[:, 1], c='red', alpha=0.7)
+plt.title('Fish Positions - Final Iteration')
+plt.xlabel('X1')
+plt.ylabel('X2')
+
+plt.tight_layout()
+plt.show()
+
+
 ```
